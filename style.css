@@ -2,17 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 body {
     background-image: url('./background.png');
+    -webkit-background-image: url('./background.png');
 }
 
 .container {
     margin: 80px auto 20px auto;
-    justify-content: center;
-    text-align: center;
-
 }
 
 button {
@@ -36,10 +35,12 @@ button:hover {
     margin: auto;
     color: #000;
     display: flex;
+    -webkit-display: flex;
     /* justify-content: center; */
     width: 400px;
     height: 180px;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     /* align-items: center; */
     text-align: center;
     font-size: 2em;
@@ -69,6 +70,7 @@ button:hover {
 
 .playing {
     transform: scale(1.12);
+    -webkit-transform: scale(1.12);
     border-color: #E06363;
     box-shadow: 0 0 1rem #BE3B3B;
     background-color: #fff;
@@ -120,8 +122,6 @@ button:hover {
 
 .playerScore {
     text-align: center;
-    /* width: 50px; */
-    /* background: #e66375; */
     font-size: 1.2em;
     color: #333;
     font-family: sans-serif;
@@ -149,6 +149,7 @@ button:hover {
     left: 38%;
     margin-top: 30px;
     transition: all .4s linear;
+    -webkit-transition: all .4s linear;
 }
 
 .submit {
@@ -159,6 +160,7 @@ button:hover {
     left: 38%;
     margin-top: 30px;
     transition: all .4s linear;
+    -webkit-transition: all .4s linear;
 }
 
 .is-visible {
@@ -183,10 +185,12 @@ button:hover {
 .win {
     position: absolute;
     transition: all 0.9s ease;
+    -webkit-transition: all 0.9s ease;
     color: #75676b;
     top: 40%;
     left: 24.5%;
     transform: scale(1.5);
+    -webkit-transform: scale(1.5);
     font-size: 1em;
 }
 
@@ -235,7 +239,6 @@ button:hover {
     }
 
     .win {
-        transform: scale(1.8);
         font-size: .7em;
         top: 45%;
         left: 30%;
