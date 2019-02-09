@@ -14,6 +14,8 @@ function valueOfPlay(x) {
     playerValue(x)
 }
 
+let clickEventType = ((document.ontouchstart !== null) ? 'click' : 'touchstart');
+
 function removeTransition(e) {
     if (e.propertyName !== "transform") return;
     this.classList.remove("playing");
@@ -23,7 +25,7 @@ let clickDisabled = false;
 seq.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 seq.forEach((num) => {
-    num.addEventListener('click', (e) => {
+    num.addEventListener(clickEventType, (e) => {
         if (!clickDisabled || sum === 0) {
             setTimeout(function () {
                 clickDisabled = true;
@@ -48,7 +50,7 @@ start = () => {
     sum = 0;
     play()
 }
-startGame.addEventListener('click', (e) => {
+startGame.addEventListener(clickEventType, (e) => {
     play();
     startGame.classList.add('not-visible')
     tryAgin.classList.add('is-visible');
@@ -57,7 +59,7 @@ startGame.addEventListener('click', (e) => {
         tryAgin.classList.add('is-open');
     }, 20)
 })
-tryAgin.addEventListener('click', (e) => {
+tryAgin.addEventListener(clickEventType, (e) => {
     if (!clickDisabled) {
         return;
     } else {
